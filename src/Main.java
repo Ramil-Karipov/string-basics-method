@@ -18,20 +18,19 @@ class homework {
     public static void task2(int client, int clientDeviceYear) {
         int ios = 1;
         int android = 0;
-        boolean condition = clientDeviceYear <= 2015 || clientDeviceYear > 2015;
+        boolean condition = clientDeviceYear > 2015;
         if (client == ios && (condition)) {
             System.out.println("Установите версию приложения для iOS по ссылке");
-            if (clientDeviceYear <= 2015) {
-                System.out.println("Установите облегчённую версию приложения для iOS по ссылке");
-            }
+        } else if (client == ios && clientDeviceYear <= 2015) {
+            System.out.println("Установите облегчённую версию приложения для iOS по ссылке");
         }
         if (client == android && (condition)) {
             System.out.println("Установите версию приложения для Android по ссылке");
-            if (clientDeviceYear <= 2015) {
-                System.out.println("Установите облегченную версию приложения для Android по ссылке");
-            }
+        } else if (client == android && clientDeviceYear <= 2015) {
+            System.out.println("Установите облегченную версию приложения для Android по ссылке");
         }
     }
+
 
     public static void task3(int deliveryDistance) {
         if (deliveryDistance < 20) {
